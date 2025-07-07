@@ -1,0 +1,47 @@
+# ----------------------------
+# Rust / Cargo artifacts
+# ----------------------------
+/target/
+**/target/
+**/incremental/
+**/*.rs.bk
+**/*.d
+
+# Ignore lock file for libraries (keep for application crates if desired)
+/Cargo.lock
+
+# ----------------------------
+# Documentation output
+# ----------------------------
+/docs/
+/book/
+
+# ----------------------------
+# IDEs and Editors
+# ----------------------------
+.vscode/
+.idea/
+*.iml
+
+# ----------------------------
+# Operating System files
+# ----------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ----------------------------
+# Miscellaneous
+# ----------------------------
+*.log
+*.tmp
+*.temp
