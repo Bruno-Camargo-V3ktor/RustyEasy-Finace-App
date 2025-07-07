@@ -1,6 +1,21 @@
 [workspace]
 resolver = "3"
-members = ["crates/main"]
+members = ["tests", "crates/main"]
+exclude = []
 
 [profile.release]
 opt-level = 3
+debug = true
+lto = "thin"
+
+[workspace.package]
+edition = "2024"
+authors = ["V3ktor <v3ktoryt@gmail.com>"]
+license = "MIT"
+
+[workspace.dependencies]
+
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "allow"
