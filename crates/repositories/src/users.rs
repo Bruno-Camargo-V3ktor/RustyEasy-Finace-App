@@ -1,5 +1,6 @@
 use core_app::entitys::User;
 use serde::{Deserialize, Serialize};
+use uuid::Uuid;
 
 // Structs
 #[derive(Serialize, Deserialize, Debug)]
@@ -10,8 +11,18 @@ pub struct UserCreateDTO {
     pub password: String,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+pub struct UserGetByIdDTO {
+    pub id: Uuid,
+}
+
 // Traits
 #[async_trait::async_trait]
 pub trait CreateUserRepository {
     async fn execute(&self, dto: UserCreateDTO) -> Result<User, ()>;
+}
+
+#[async_trait::async_trait]
+pub trait GetUserByIdRepository {
+    async fn execute(&self, dto: UserGetByIdDTO) -> Result<User, ()>;
 }

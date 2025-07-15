@@ -8,7 +8,9 @@ license.workspace = true
 [dependencies]
 serde.workspace = true
 async-trait.workspace = true
+uuid.workspace = true
 core-app = { path = "../core" }
+
 
 [lints]
 workspace = true
