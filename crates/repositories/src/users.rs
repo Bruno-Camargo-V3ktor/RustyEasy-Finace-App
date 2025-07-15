@@ -24,6 +24,14 @@ pub struct UserDeleteByIdDTO {
     pub id: Uuid,
 }
 
+pub struct UserUpdateByIdDTO {
+    pub id: Uuid,
+    pub first_name: Option<String>,
+    pub last_name: Option<String>,
+    pub email: Option<String>,
+    pub password: Option<String>,
+}
+
 // Traits
 #[async_trait::async_trait]
 pub trait CreateUserRepository {
@@ -43,4 +51,9 @@ pub trait GetUserByEmailRepository {
 #[async_trait::async_trait]
 pub trait DeleteUserByIdRepository {
     async fn execute(&self, dto: UserDeleteByIdDTO) -> Result<User, ()>;
+}
+
+#[async_trait::async_trait]
+pub trait UpdateUserByIdReposiory {
+    async fn execute(&self, dto: UserUpdateByIdDTO) -> Result<User, ()>;
 }
