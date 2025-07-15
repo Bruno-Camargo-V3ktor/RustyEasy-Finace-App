@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["tests", "crates/core", "crates/server"]
+members = ["tests", "crates/core", "crates/server", "crates/repositories"]
 exclude = []
 
 [profile.release]
@@ -17,6 +17,7 @@ license = "MIT"
 serde = { version = "1", features = ["derive"] }
 uuid = { version = "1", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
+async-trait = "0.1"
 
 [workspace.lints.clippy]
 all = "warn"
