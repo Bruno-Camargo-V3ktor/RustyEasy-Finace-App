@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["tests", "crates/main"]
+members = ["tests", "crates/core", "crates/server"]
 exclude = []
 
 [profile.release]
@@ -14,7 +14,9 @@ authors = ["V3ktor <v3ktoryt@gmail.com>"]
 license = "MIT"
 
 [workspace.dependencies]
-
+serde = { version = "1", features = ["derive"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
 
 [workspace.lints.clippy]
 all = "warn"
