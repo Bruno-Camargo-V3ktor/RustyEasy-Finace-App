@@ -16,14 +16,17 @@ pub struct UserGetByIdDTO {
     pub id: Uuid,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
 pub struct UserGetByEmailDTO {
     pub email: String,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
 pub struct UserDeleteByIdDTO {
     pub id: Uuid,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
 pub struct UserUpdateByIdDTO {
     pub id: Uuid,
     pub first_name: Option<String>,
